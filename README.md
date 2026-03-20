@@ -1,354 +1,709 @@
-# Mandaditos Jeshia - Landing Page
+# 🛒 G5 Jerseys MX - Landing Page de Ventas
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge">
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge&logo=vercel&logoColor=white" alt="Status">
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
 </p>
 
-> Landing page premium para Mandaditos Jeshia - Servicio de mensajería, encargos y tramitaciones en Acayucan, Oluta y Soconusco, Veracruz.
+<p align="center">
+  🌐 <strong>Sitio en vivo:</strong> https://oscaromargp.github.io/G5JerseysMX/<br>
+  📂 <strong>Repositorio:</strong> https://github.com/oscaromargp/G5JerseysMX
+</p>
 
 ---
 
-## 📋 Índice
-
-- [Descripción](#-descripción)
-- [Características](#-características)
-- [Tecnologías](#-tecnologías)
-- [Estructura del Proyecto](#-estructura-del-proyecto)
-- [Secciones del Sitio](#-secciones-del-sitio)
-- [Logs de Cambios](#-logs-de-cambios)
-- [Documentación Técnica](#-documentación-técnica)
-- [Configuración](#-configuración)
-- [Deployment](#-deployment)
-- [Contacto](#-contacto)
-- [Licencia](#-licencia)
+> 🎯 **Landing page de alta conversión** para la venta de jerseys México 2026 Versión Jugador (Calidad G5). Diseñada con técnicas de copywriting profesional, social proof y CTAs directos a WhatsApp.
 
 ---
 
-## 🎯 Descripción
+## 📋 Tabla de Contenidos
 
-**Mandaditos Jeshia** es un servicio local de mensajería, encargos personales y tramitaciones ubicado en el sur de Veracruz, México. La landing page está diseñada para mostrar todos los servicios y facilitar el contacto directo por WhatsApp.
-
-### Propuesta de Valor
-- **Mensajería local** en Acayucan, Oluta y Soconusco
-- **Encargos personales**: compras, depósitos, entregas, recados
-- **Tramitaciones y gestiones**: papelería, documentos, procesos legales
-- **Servicio express** disponible
-- **Atención personalizada** y precios justos
-
-### Diferenciadores
-- Cobertura en 3 municipios del sur de Veracruz
-- Servicio integral de trámites (papelería, documentos, procesos legales)
-- Atención humana y cercana
-- Todo se cotiza según necesidades del cliente
+1. [Descripción del Proyecto](#-descripción-del-proyecto)
+2. [Propuesta de Valor](#-propuesta-de-valor)
+3. [Producto](#-producto)
+4. [Tecnologías Utilizadas](#-tecnologías-utilizadas)
+5. [Estructura del Proyecto](#-estructura-del-proyecto)
+6. [Secciones del Sitio](#-secciones-del-sitio)
+7. [Características y Funcionalidades](#-características-y-funcionalidades)
+8. [Enlaces y Recursos](#-enlaces-y-recursos)
+9. [Prompts Utilizados](#-prompts-utilizados)
+10. [Logs de Cambios](#-logs-de-cambios)
+11. [Guía de Configuración](#-guía-de-configuración)
+12. [Guía de Deployment](#-guía-de-deployment)
+13. [SEO y Metadatos](#-seo-y-metadatos)
+14. [Personalización](#-personalización)
+15. [Roadmap](#-roadmap)
+16. [Créditos y Contacto](#-créditos-y-contacto)
 
 ---
 
-## ✨ Características
+## 📝 Descripción del Proyecto
 
-### Secciones de la Landing Page
+**G5 Jerseys MX** es una landing page premium diseñada para convertir visitantes en compradores. El sitio web está optimizado para:
 
-| Sección | Descripción |
+- 🎯 **Conversión directa** a WhatsApp
+- 📱 **Mobile First** (90% del tráfico viene de Facebook/Instagram)
+- ⚡ **Alta velocidad** de carga
+- 🎨 **Diseño Dark Luxury** con acentos Verde México
+- 🔄 **Scroll suave** y animaciones profesionales
+
+### Objetivo Principal
+Convertir tráfico de redes sociales (Facebook/Instagram) en ventas a través de WhatsApp, sin necesidad de un carrito de compras o pasarela de pago integrada.
+
+---
+
+## 💡 Propuesta de Valor
+
+| Aspecto | Descripción |
 |---------|-------------|
-| **Hero** | Headline impactante con CTA a WhatsApp y nota de cotización |
-| **Servicios** | Grid de 6 servicios principales con flip cards |
-| **Trámites** | Sección especial para gestion, papelería y procesos legales |
-| **Servicios Extra** | Otros servicios adicionales (fotocopias, cobranza, etc.) |
-| **Cobertura** | Mapa de zona de servicio con 3 municipios |
-| **Testimonios** | 6 testimonios de clientes reales |
-| **FAQ** | 8 preguntas frecuentes con accordion interactivo |
-| **Nosotros** | Historia y valores de la empresa |
-| **CTA Final** | Llamada a la acción con urgencia |
-| **Contacto** | Teléfonos, WhatsApp y ubicación |
-| **Footer** | Links, redes sociales, créditos del desarrollador |
-| **WhatsApp Float** | Botón flotante siempre visible |
-
-### Funcionalidades
-
-- [x] Diseño 100% Mobile First
-- [x] Dark Mode Premium con acentos Naranja/Fuego
-- [x] Animaciones suaves (particles, float, glow, pulse)
-- [x] Flip cards para servicios (hover/click)
-- [x] FAQ accordion interactivo
-- [x] Smooth scroll para navegación
-- [x] Contadores animados
-- [x] Navegación fija con efecto scroll
-- [x] Menú móvil responsive
-- [x] CTAs directos a WhatsApp con mensajes predefinidos
-- [x] Botón flotante de WhatsApp siempre visible
-- [x] SEO básico con meta tags
+| **¿Qué vendemos?** | Jerseys México 2026 Versión Jugador (Calidad G5) |
+| **¿Para quién?** | Aficionados al fútbol, equipos amateurs, revendedores |
+| **¿Por qué nosotros?** | Calidad profesional a precio justo, envíos a todo México |
+| **Diferenciador** | Versión Jugador (G5) = misma calidad que usan los profesionales |
+| **Color principal** | Verde Selección Mexicana (#22C55E) |
 
 ---
 
-## 🛠️ Tecnologías
+## 👕 Producto
+
+### Jersey México 2026 Versión Jugador
+
+**Especificaciones del producto:**
+- **Marca:** adidas
+- **Modelo:** JL8537 - México 2026 Home Stadium Jersey
+- **Tecnología:** Climacool (ventilación avanzada)
+- **Material:** 100% Poliéster reciclado
+- **Tipo:** Versión Jugador (G5) - Máxima calidad disponible
+- **Características:**
+  - Logos Termosellados (no bordados)
+  - Corte Atlético Ajustado
+  - Holograma de autenticidad
+  - Etiqueta oficial con código verificable
+- **Tallas disponibles:** S, M, L, XL, XXL, 3XL
+- **Color:** Bold Green (Verde selección mexicana)
+
+### Kits Disponibles
+
+| Kit | Contenido | Precio | Envío |
+|-----|-----------|--------|-------|
+| **Aficionado** | 1 Jersey | $299 MXN | +$150 estándar |
+| **Equipo** ⭐ | 12 Jerseys | $2,499 MXN | GRATIS |
+| **Mayorista** | 50+ Jerseys | Cotizar | Según volumen |
+
+---
+
+## 🛠️ Tecnologías Utilizadas
 
 ### Stack Principal
 
-| Tecnología | Versión | Propósito |
-|------------|---------|-----------|
-| **HTML5** | - | Estructura semántica |
-| **CSS3** | - | Estilos custom + variables CSS |
-| **Vanilla JavaScript** | ES6+ | Interactividad |
-| **Google Fonts** | - | Tipografía premium (Plus Jakarta Sans + Inter) |
+| Tecnología | Versión | Propósito | CDN/Documentación |
+|-----------|---------|-----------|-------------------|
+| **HTML5** | - | Estructura semántica del documento | [MDN Docs](https://developer.mozilla.org/es/docs/Web/HTML) |
+| **Tailwind CSS** | 3.x | Framework CSS utility-first | [Tailwind Docs](https://tailwindcss.com/) |
+| **Vanilla JavaScript** | ES6+ | Interactividad sin dependencias | [MDN Docs](https://developer.mozilla.org/es/docs/Web/JavaScript) |
+| **Google Fonts** | - | Tipografía web premium | [Fonts](https://fonts.google.com/) |
+
+### Fuentes Tipográficas
+
+| Fuente | Uso | Peso | Documentación |
+|--------|-----|------|--------------|
+| **Plus Jakarta Sans** | Títulos y headers | 400-800 | [Google Fonts](https://fonts.google.com/specimen/Plus+Jakarta+Sans) |
+| **Inter** | Cuerpo de texto | 400-600 | [Google Fonts](https://fonts.google.com/specimen/Inter) |
 
 ### Recursos Externos
 
-| Recurso | URL | Uso |
-|---------|-----|-----|
-| Google Fonts | fonts.googleapis.com | Tipografía |
-| Images | images/logo.png | Logo |
+| Recurso | URL | Uso en el Proyecto |
+|---------|-----|-------------------|
+| Tailwind CDN | `https://cdn.tailwindcss.com` | Estilos CSS |
+| Google Fonts | `https://fonts.googleapis.com` | Tipografía |
+| YouTube | `https://www.youtube.com/embed/wKZY-opNjfQ` | Video de manufactura |
+| Google Photos | Álbum de fotos del producto | Galería de imágenes |
 
-### Arquitectura de Archivos
+---
+
+## 📁 Estructura del Proyecto
 
 ```
-Mandaditos-Jeshia/
-├── index.html     # Estructura HTML completa
-├── styles.css     # Estilos CSS (variables + componentes)
-├── script.js      # JavaScript para interactividad
-├── images/
-│   └── logo.png   # Logo de la empresa
-└── README.md      # Documentación
+G5JerseysMX/
+├── index.html          # Archivo principal (HTML + CSS inline + JavaScript)
+├── README.md           # Documentación del proyecto
+├── images/            # Directorio para imágenes locales (vacío)
+│   └── .gitkeep      # Marcador para mantener el directorio
+└── .git/             # Repositorio Git
+```
+
+### Arquitectura del Sitio
+
+```
+index.html (todo-en-uno)
+├── <head>
+│   ├── Meta tags (charset, viewport, title, description)
+│   ├── Preconnect para Google Fonts
+│   ├── Google Fonts (Plus Jakarta Sans + Inter)
+│   ├── Tailwind CSS CDN
+│   └── CSS Custom (variables, animaciones, componentes)
+│
+├── <body>
+│   ├── Stock Banner (urgencia)
+│   ├── Navigation (navbar fijo)
+│   ├── Hero Section
+│   ├── ¿Qué es G5? (comparativa)
+│   ├── Características
+│   ├── Galería
+│   ├── Testimonios
+│   ├── Precios (3 kits)
+│   ├── Video (YouTube)
+│   ├── FAQ (accordion)
+│   ├── CTA Final
+│   ├── Footer
+│   ├── WhatsApp Float Button
+│   └── <script> (JavaScript)
 ```
 
 ---
 
-## 📂 Secciones del Sitio
+## 📄 Secciones del Sitio
 
-### 1. Hero
-- Headline con nombre del servicio
+### 1. Stock Banner (Urgencia)
+- Banner superior con colores Verde México
+- Mensaje: "¡Solo 47 jerseys disponibles esta semana!"
+- Promoción: "Envío GRATIS hasta el 31 de marzo"
+- Animación de urgencia (pulse)
+
+### 2. Navigation (Navbar)
+- Logo "G5 Jerseys MX"
+- Links: ¿Qué es G5?, Características, Testimonios, Precios, FAQ
+- Botón CTA: "Pedir por WhatsApp"
+- Efecto sticky con blur al scroll
+- Menú móvil hamburger
+
+### 3. Hero Section
+- Badge: "Edición Mundial 2026 - México"
+- Headline: "El Jersey que los Profesionales Usan, Ahora a Tu Alcance"
 - Subtítulo con propuesta de valor
-- Nota de "Todo se cotiza"
-- CTAs: WhatsApp y Llamar
-- Estadísticas animadas (municipios, servicios, clientes)
+- Trust badges: Envío a 32 estados, Pago seguro, Stock limitado
+- CTAs: WhatsApp + Conocer más
+- Imagen del jersey con animación flotante
+- Partículas de fondo
 
-### 2. Servicios
-Flip cards con 6 servicios principales:
-1. Compras (tiendas, mercados, supermercados)
-2. Depósitos y Pagos (bancos, transferencias)
-3. Envíos (paquetes, documentos)
-4. Entregas (a domicilio)
-5. Recados y Mensajes (cartas, avisos)
-6. Medicinas (farmacias, recetas)
+### 4. ¿Qué es G5? (Comparativa)
+- Título: "G5 = La Calidad Profesional"
+- Descripción del diferenciador
+- **Card G5 (Verde):** 6 beneficios de la versión jugador
+- **Card Réplica (Rojo):** 6 desventajas de réplicas económicas
+- Grid de 4 features: 100% Original, Climacool, Logos Termosellados, Corte Atlético
 
-### 3. Trámites (Nueva Sección)
-**Sección especial para servicios de gestión:**
-- Card principal con propuesta "Te ayudamos con la papelería, gestión y procesos legales"
-- Grid de 8 categorías de trámites:
-  - Trámites Escolares
-  - Trámites de Salud
-  - Documentos Oficiales
-  - Procesos Legales
-  - Trámites de Vivienda
-  - Trámites Laborales
-  - Trámites Vehiculares
-  - Trámites Digitales
-- Nota: "No encuentras tu trámite? Te cotizamos sin compromiso"
+### 5. Características (Features)
+- Título: "Detalles que Marcan la Diferencia"
+- Grid de 6 cards con hover:
+  1. Logos Termosellados
+  2. Tecnología Climacool
+  3. Corte Atlético Ajustado
+  4. Tela Premium 100% Poliéster
+  5. 100% Auténtico
+  6. Envío a Todo México
 
-### 4. Servicios Extra
-- Fotocopias e Impresiones
-- Cobranza Express
-- Espera en Filas
-- Compras Especiales
+### 6. Galería
+- Grid responsive de fotos reales
+- Primera imagen destacada (2x2)
+- Hover zoom en todas las imágenes
+- Overlay con descripción
 
-### 5. Cobertura
-- 3 municipios: Acayucan, Oluta, Soconusco
-- Servicio express disponible
-- Mapa placeholder
-- CTA para consultar zonas
+### 7. Testimonios
+- Título: "Lo que Dicen Nuestros Clientes"
+- 6 testimonios con:
+  - Avatar con iniciales
+  - Nombre y ubicación
+  - Rating 5 estrellas
+  - Quote específico
+  - Tiempo desde compra
+- Trust stats: 500+ vendidos, 32 estados, 98% satisfechos, 4.9/5
 
-### 6. Testimonios (Mejorado)
-6 testimonios con:
-- Nombre completo
-- Ubicación y ocupación
-- Quote específico
-- Rating 5 estrellas
-- Avatar con iniciales
+### 8. Precios (Pricing)
+- Título: "Elige Tu Kit Perfecto"
+- 3 cards:
+  - **Kit Aficionado** ($299): 1 jersey + envío
+  - **Kit Equipo** ($2,499): 12 jerseys + GRATIS (MÁS VENDIDO)
+  - **Lote Mayorista** (Cotizar): 50+ piezas
+- Proceso de compra en 4 pasos
 
-**Trust Stats:**
-- 500+ Clientes satisfechos
-- 4.9/5 Calificación promedio
-- 98% Resuelven a la primera
-- 15min Tiempo de respuesta
+### 9. Video
+- Video de manufactura (YouTube)
+- Título: "Cómo Se Fabrica Tu Jersey"
+- Iframe responsive 16:9
 
-### 7. FAQ (Nueva Sección)
-8 preguntas frecuentes con accordion:
-1. ¿Cuáles son los horarios de servicio?
-2. ¿Cómo se calculan los precios?
-3. ¿Cubren todas las zonas?
-4. ¿Qué métodos de pago aceptan?
-5. ¿Hacen trámites que requieren esperar en fila?
-6. ¿Qué pasa si el trámite no se concreta?
-7. ¿Manejan documentos importantes con seguridad?
-8. ¿Puedo solicitar un servicio recurrente o mensual?
+### 10. FAQ
+- Título: "Preguntas Frecuentes"
+- 6 preguntas con accordion:
+  1. ¿Qué es exactamente "Calidad G5"?
+  2. ¿Cuáles son los costos de envío?
+  3. ¿Cuánto tarda en llegar?
+  4. ¿Se puede pagar con tarjeta?
+  5. ¿Es original o réplica?
+  6. ¿Qué pasa si no me gusta?
 
-### 8. Contacto
-- 2 números telefónicos
-- WhatsApp directo
-- Ubicación con iconos de servicios
+### 11. CTA Final
+- Título: "¿Listo para Vestir como un Profesional?"
+- Urgencia: "Stock limitado... Envío GRATIS hasta el 31 de marzo"
+- Botón principal WhatsApp
+- Trust badges finales
 
-### 9. Footer
-- Links organizados
-- Información del desarrollador
-- Créditos
+### 12. Footer
+- Logo y descripción
+- Links organizados: Productos, Información, Contacto
+- Copyright
+- Badge "Hecho con ❤️ en México 🇲🇽"
 
----
-
-## 📝 Logs de Cambios
-
-### v2.0.0 (2026-03-20) - Versión Completa Mejorada
-
-**Cambios mayores:**
-- Reescritura completa del Hero con nota de cotización
-- Nueva **sección de Trámites** destacada con 8 categorías
-- **FAQ completo** con 8 preguntas en accordion
-- **Testimonios mejorados** (6 testimonios detallados)
-- Trust stats agregados
-- Botón flotante de WhatsApp añadido
-- Navegación actualizada con FAQ
-- Estilos CSS optimizados para nuevas secciones
-- Todo se cotiza (sin precios fijos)
-
-**Archivos modificados:** `index.html`, `styles.css`
+### 13. WhatsApp Float
+- Botón flotante siempre visible
+- Posición: bottom-right
+- Animación pulse
+- Enlace directo a WhatsApp con mensaje predefinido
 
 ---
 
-### v1.0.0 (2026-03-20) - Versión Inicial
+## ✨ Características y Funcionalidades
 
-**Características:**
-- Landing page básica dark mode
-- Hero section con servicios
-- Flip cards de servicios
-- Cobertura de 3 municipios
-- Testimonios básicos
-- Sección Nosotros
-- Footer con créditos del desarrollador
+### Diseño
+- [x] Diseño 100% Mobile First
+- [x] Dark Mode Premium (fondo negro #000000)
+- [x] Acentos Verde México (#22C55E)
+- [x] Glassmorphism en cards
+- [x] Animaciones CSS suaves
+- [x] Gradientes radiales
+- [x] Efectos glow en elementos importantes
 
-**Archivos:** `index.html`, `styles.css`, `script.js`, `README.md`
+### Interactividad
+- [x] Navegación sticky con efecto blur
+- [x] Smooth scroll para navegación interna
+- [x] Menú móvil responsive (hamburger)
+- [x] FAQ accordion interactivo
+- [x] Hover effects en cards
+- [x] Botón flotante WhatsApp
 
----
-
-## 📖 Documentación Técnica
-
-### Sistema de Colores
-
-```css
-/* Color Principal: Naranja/Fuego (#F97316) */
---primary-400: #F97316  /* Base */
---primary-500: #EA580C  /* Oscuro */
---primary-300: #FB923C  /* Claro */
-
-/* Fondos */
---bg-primary: #000000    /* Negro puro */
---bg-secondary: #09090B  /* Gris ultra oscuro */
---bg-tertiary: #18181B  /* Gris oscuro */
-```
-
-### Animaciones Disponibles
-
-| Animación | Uso |
-|-----------|-----|
-| `float` | Elemento flotante suave |
-| `pulse-glow` | Pulso con glow para CTAs |
-| `pulse-wa` | Pulso para botón WhatsApp |
-| `fade-in` | Revelación de elementos |
-| `counter` | Números animados |
+### Optimización
+- [x] Tailwind CSS vía CDN (sin build)
+- [x] Google Fonts con preconnect
+- [x] Imágenes externas optimizadas
+- [x] CSS inline (sin archivo externo)
+- [x] JavaScript vanilla (sin dependencias)
 
 ### SEO
-
-Meta tags incluidos:
-- Title optimizado
-- Description con keywords
-- Viewport para responsive
+- [x] Meta tags básicos
+- [x] Title optimizado
+- [x] Description con keywords
+- [x] Viewport para responsive
+- [x] Estructura semántica HTML5
 
 ---
 
-## ⚙️ Configuración
+## 🔗 Enlaces y Recursos
+
+### Enlaces del Proyecto
+| Recurso | URL |
+|---------|-----|
+| 🌐 Sitio en vivo | https://oscaromargp.github.io/G5JerseysMX/ |
+| 📂 Repositorio GitHub | https://github.com/oscaromargp/G5JerseysMX |
+| 📝 Issues | https://github.com/oscaromargp/G5JerseysMX/issues |
+
+### Enlaces del Producto (Referencia)
+| Recurso | URL |
+|---------|-----|
+| Producto original | https://mexicofanshop.com/es/collections/world-cup/products/adidas-2026-mexico-home-jersey |
+| Adidas México | https://www.adidas.mx/jersey-local-seleccion-nacional-de-mexico-26/JL8537.html |
+
+### Enlaces de Marketing
+| Recurso | URL |
+|---------|-----|
+| Video promo 1 | https://photos.app.goo.gl/w9mP2ZYYYWMMuHoN9 |
+| Video promo 2 | https://photos.app.goo.gl/JXw6stbj5sNmjieW9 |
+| Álbum de fotos | https://photos.app.goo.gl/ZZz4Gdj4MNn6PjNY7 |
+| Google Form (cotizaciones) | https://forms.gle/rmrtYFEMU9dbNXkKA |
+| Video manufactura | https://www.youtube.com/watch?v=wKZY-opNjfQ |
+
+### Contacto del Negocio
+| Medio | Contacto |
+|-------|----------|
+| 📱 WhatsApp | +52 1 612 107 8078 |
+| 📧 Email | (Incluir si aplica) |
+| 📍 Ubicación | México |
+
+---
+
+## 📝 Prompts Utilizados
+
+### Prompt Principal (Creación Original)
+
+```markdown
+# 🚀 PROMPT UNIVERSAL: Landing Page Premium Dark Mode
+
+## 📋 INSTRUCCIONES PARA LA IA
+
+### ❓ PREGUNTA 1: Información del Negocio
+- **Nombre del negocio/marca:** G5 Jerseys MX
+- **Tagline:** Jersey México 2026 Versión Jugador - Calidad Premium
+- **Propuesta de valor:** Venta de jerseys adidas México 2026 Versión Jugador 
+  (Calidad G5) con tecnología Climacool, logos termosellados y envío a todo México.
+
+### ❓ PREGUNTA 2: Sector y Estilo
+- **Sector/Industria:** E-commerce / Venta de artículos deportivos
+- **Tipo de web:** E-commerce (Tienda en línea simple)
+
+### ❓ PREGUNTA 3: Color Principal
+- **Color de acento principal:** Verde (#22C55E) - Verde selección mexicana
+
+## Producto de Referencia
+La playera que se vende es este modelo:
+https://mexicofanshop.com/es/collections/world-cup/products/adidas-2026-mexico-home-jersey
+
+## Links Proporcionados
+- Video promo 1: https://photos.app.goo.gl/w9mP2ZYYYWMMuHoN9
+- Video promo 2: https://photos.app.goo.gl/JXw6stbj5sNmjieW9
+- Álbum de fotos: https://photos.app.goo.gl/ZZz4Gdj4MNn6PjNY7
+- Google Form: https://forms.gle/rmrtYFEMU9dbNXkKA
+- Video manufactura: https://www.youtube.com/watch?v=wKZY-opNjfQ
+
+## Número de WhatsApp
++52 1 612 107 8078 (no mostrar número, solo botones)
+```
+
+### Análisis Post-Lanzamiento
+
+```markdown
+Análisis completo del sitio actual:
+- NO hay testimonios
+- NO hay FAQ
+- NO explica qué es "G5"
+- Proceso de COMPRA incompleto
+- Sin navegación interna, sin trust badges, sin urgencia
+
+Objetivo: convertirlo en una landing page de ventas de alta conversión 
+(técnica AIDA + social proof + objeciones resueltas).
+
+Secciones nuevas obligatorias:
+1. "¿Qué es la Calidad G5?" - Comparativa G5 vs Réplica
+2. Testimonios (6 testimonios reales)
+3. FAQ (accordion con preguntas frecuentes)
+
+Mejoras de diseño:
+- Navegación fija con smooth scroll
+- Hero más potente
+- Trust badges
+- Contador de stock
+- Urgencia ("Envío gratis hasta...")
+- Mobile-first 100%
+```
+
+---
+
+## 📊 Logs de Cambios
+
+### [v3.0.0] - 2026-03-20
+**Optimización Final para Conversión**
+
+- ✅ Reescritura completa con Tailwind CSS
+- ✅ Nueva sección "¿Qué es G5?" con comparativa visual
+- ✅ 6 testimonios detallados con ubicaciones reales
+- ✅ FAQ completo con 6 preguntas frecuentes
+- ✅ Banner de stock/urgencia
+- ✅ Trust badges mejorados en Hero
+- ✅ Proceso de compra en 4 pasos
+- ✅ Navegación fija con smooth scroll
+- ✅ Mobile menu funcional
+- ✅ Botón flotante WhatsApp
+- ✅ Animaciones optimizadas
+
+**Archivos modificados:** `index.html`
+
+---
+
+### [v2.0.0] - 2026-03-20
+**Landing Page Completa**
+
+- ✅ Hero section impactante
+- ✅ Sección de características
+- ✅ Galería de fotos reales
+- ✅ 3 planes de precios
+- ✅ Video de manufactura
+- ✅ CTA con WhatsApp
+- ✅ Footer básico
+
+**Archivos añadidos:** `index.html`
+
+---
+
+### [v1.0.0] - 2026-03-20
+**Versión Inicial**
+
+- ✅ Repositorio creado
+- ✅ README básico
+
+**Archivos añadidos:** `README.md`
+
+---
+
+## ⚙️ Guía de Configuración
 
 ### Requisitos Previos
-- Ninguno (sitio estático, no requiere build)
-- Solo necesitas un navegador moderno
+
+Para trabajar con este proyecto necesitas:
+
+1. **Un navegador web moderno** (Chrome, Firefox, Edge, Safari)
+2. **Git** (para control de versiones)
+3. **Editor de código** (VS Code recomendado)
+4. **Cuenta de GitHub** (para hosting)
+
+### Clonar el Repositorio
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/oscaromargp/G5JerseysMX.git
+
+# Entrar al directorio
+cd G5JerseysMX
+
+# Abrir en VS Code (opcional)
+code .
+```
+
+### Desarrollo Local
+
+1. Abre `index.html` directamente en tu navegador
+2. O usa una extensión de VS Code como "Live Server"
+3. Edita el archivo y guarda para ver cambios
 
 ### Variables Editables
 
+#### Número de WhatsApp
 ```javascript
-// Números de WhatsApp
-const WHATSAPP = '529241440357';
-const TEL_1 = '9241440357';
-const TEL_2 = '9241012877';
+// Buscar y reemplazar en todo el archivo
+// Número actual: 5216121078078
+// Formato: 52 + número sin + al inicio
 ```
 
-### Personalización de Mensajes
-
-Los mensajes de WhatsApp están codificados en los href:
-
-```javascript
-// Ejemplo
-https://wa.me/529241440357?text=Hola%2C%20me%20interesa%20conocer%20sus%20servicios
+#### Precios
+```html
+<!-- Buscar en sección de Precios -->
+<span class="text-5xl font-extrabold text-white">$299</span>
 ```
 
-Para cambiar los mensajes, modifica los enlaces `href` de los botones de WhatsApp.
+#### Stock
+```html
+<!-- Banner de stock -->
+<span id="stock-count" class="font-bold text-yellow-300">¡Solo 47 jerseys disponibles esta semana!</span>
+```
 
-### Cambiar Color de Acento
-
-El sitio usa Naranja/Fuego (`#F97316`). Para cambiarlo:
-
-1. Busca `F97316` y `249,115,22` (RGB) en `styles.css`
-2. Reemplázalos por tu color HEX y RGB
+#### Promociones
+```html
+<!-- Fecha de promoción -->
+<span class="text-green-200">Envío GRATIS hasta el 31 de marzo</span>
+```
 
 ---
 
-## 🚀 Deployment
+## 🚀 Guía de Deployment
 
-### GitHub Pages (Configuración Actual)
+### Opción 1: GitHub Pages (Gratuito) ⭐
 
-1. Ve a **Settings** del repositorio
-2. Navega a **Pages** en el sidebar
+1. Ve a **Settings** del repositorio en GitHub
+2. En el menú lateral, click en **Pages**
 3. En **Build and deployment**:
    - Source: **Deploy from a branch**
    - Branch: **main** / **/ (root)**
 4. Click **Save**
-5. Espera 2-5 minutos para el deploy
+5. Espera 2-5 minutos
+6. Tu sitio estará en: `https://TU_USUARIO.github.io/G5JerseysMX/`
 
-**URL del sitio:** https://oscaromargp.github.io/Mandaditos-Jeshia/
+### Opción 2: Vercel
 
-### Otras Opciones
+```bash
+# Instalar Vercel CLI
+npm i -g vercel
 
-| Plataforma | Pasos |
-|------------|-------|
-| **Vercel** | `vercel --prod` o drag & drop |
-| **Netlify** | Drag & drop de la carpeta |
-| **Cloudflare Pages** | Conectar repo de GitHub |
-| **Hosting tradicional** | Subir archivos por FTP |
+# Deploy
+vercel
+
+# Deploy a producción
+vercel --prod
+```
+
+### Opción 3: Netlify
+
+1. Ve a [netlify.com](https://netlify.com)
+2. Arrastra la carpeta del proyecto
+3. ¡Listo! Obtén una URL gratuita
+
+### Opción 4: Hosting Tradicional
+
+1. Sube `index.html` por FTP
+2. Asegúrate de que el archivo se llame `index.html`
+3. Configura tu dominio
 
 ---
 
-## 📞 Contacto
+## 🔍 SEO y Metadatos
 
-### Mandaditos Jeshia
-- **Teléfono 1:** 924 144 0357
-- **Teléfono 2:** 924 101 2877
-- **WhatsApp:** [Enviar mensaje](https://wa.me/529241440357)
-- **Ubicación:** Acayucan, Oluta y Soconusco, Veracruz, México
+### Meta Tags Actuales
+
+```html
+<title>G5 Jerseys MX | Jersey México 2026 Versión Jugador - Calidad Premium</title>
+<meta name="description" content="Jersey México 2026 Versión Jugador con tecnología Climacool. Calidad G5 = La misma que usan los profesionales. Envíos a todo México.">
+```
+
+### Meta Tags Open Graph (Recomendado añadir)
+
+```html
+<meta property="og:title" content="G5 Jerseys MX - Jersey México 2026">
+<meta property="og:description" content="Jersey México 2026 Versión Jugador. Calidad G5 = La misma que usan los profesionales.">
+<meta property="og:image" content="URL_DE_IMAGEN">
+<meta property="og:url" content="https://oscaromargp.github.io/G5JerseysMX/">
+<meta property="og:type" content="website">
+```
+
+### Meta Tags para Redes Sociales
+
+```html
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="G5 Jerseys MX">
+<meta name="twitter:description" content="Jersey México 2026 Versión Jugador">
+<meta name="twitter:image" content="URL_DE_IMAGEN">
+```
+
+---
+
+## 🎨 Personalización
+
+### Cambiar Color Principal
+
+El color principal es Verde México (`#22C55E`). Para cambiarlo:
+
+1. Busca `22C55E` y reemplázalo por tu color HEX
+2. Ajusta los colores derivados (más claro/más oscuro)
+3. Actualiza los valores RGB para rgba()
+
+```css
+/* Color base */
+--green-500: #TU_COLOR_NUEVO;
+
+/* Versiones claras */
+--green-400: #COLOR_MAS_CLARO;
+--green-300: #COLOR_AUN_MAS_CLARO;
+
+/* Versiones oscuras */
+--green-600: #COLOR_MAS_OSCURO;
+--green-700: #COLOR_AUN_MAS_OSCURO;
+
+/* RGB para rgba() */
+--primary-rgb: R, G, B; /* Valores de 0-255 */
+```
+
+### Agregar Más Testimonios
+
+Copia el formato de un testimonial card y modifica:
+
+```html
+<div class="testimonial-card glass-card p-6">
+    <div class="flex items-center gap-4 mb-4">
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-xl font-bold text-black">AB</div>
+        <div>
+            <h4 class="font-bold">Nombre Apellido</h4>
+            <p class="text-gray-400 text-sm">Ciudad • Tipo de compra</p>
+        </div>
+    </div>
+    <div class="flex gap-1 mb-3">
+        <span class="text-yellow-400">★★★★★</span>
+    </div>
+    <p class="text-gray-300 mb-4">"Tu testimonial aquí..."</p>
+    <div class="flex items-center gap-2 text-green-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        Tiempo desde compra
+    </div>
+</div>
+```
+
+### Agregar Más Preguntas FAQ
+
+Copia el formato y modifica:
+
+```html
+<div class="faq-item glass-card overflow-hidden">
+    <button class="faq-question w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+        <span class="font-bold text-lg">Tu pregunta aquí</span>
+        <svg class="faq-icon w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </button>
+    <div class="faq-answer px-6 pb-6">
+        <p class="text-gray-400">Tu respuesta aquí...</p>
+    </div>
+</div>
+```
+
+---
+
+## 🗺️ Roadmap
+
+### Fase 1: Completo ✅
+- [x] Landing page básica
+- [x] WhatsApp integration
+- [x] SEO básico
+- [x] Mobile responsive
+
+### Fase 2: En Progreso 🚧
+- [x] Testimonios
+- [x] FAQ
+- [x] Explicación G5
+- [ ] Open Graph tags
+- [ ] Analytics
+
+### Fase 3: Pendiente 📋
+- [ ] Google Analytics / Plausible
+- [ ] Sitemap.xml
+- [ ] Robots.txt
+- [ ] Favicon.svg
+- [ ] Optimizar imágenes (WebP)
+
+### Fase 4: Futuras Mejoras 🚀
+- [ ] Integración Mercado Pago
+- [ ] Carrito de compras
+- [ ] Panel de administración
+- [ ] Multi-idioma (EN/ES)
+- [ ] PWA (Progressive Web App)
+- [ ] Chatbot de WhatsApp
+
+---
+
+## 👨‍💻 Créditos y Contacto
 
 ### Desarrollador
-- **Nombre:** Oscar Omar Gómez Peña
-- **Email:** oscaromargp@gmail.com
-- **Teléfono:** 612-107-8075
-- **Web:** [bit.ly/oscaromargp](https://bit.ly/oscaromargp)
+| Campo | Información |
+|-------|-------------|
+| **Nombre** | Oscar Omar Gómez Peña |
+| **Título** | Emprendedor Tecnológico Digital |
+| **Email** | oscaromargp@gmail.com |
+| **Teléfono** | 612-107-8075 |
+| **Web** | [bit.ly/oscaromargp](https://bit.ly/oscaromargp) |
+
+### Herramientas Utilizadas
+- **Framework CSS:** [Tailwind CSS](https://tailwindcss.com/)
+- **Tipografía:** [Google Fonts](https://fonts.google.com/)
+- **Hosting:** [GitHub Pages](https://pages.github.com/)
+- **IDE:** [VS Code](https://code.visualstudio.com/)
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la Licencia MIT.
+
+Puedes usar, modificar y distribuir este código libremente, dando crédito al desarrollador original.
 
 ---
 
 <p align="center">
-  <strong>Mandaditos Jeshia</strong> © 2026<br>
-  Tu tiempo vale, nosotros lo hacemos por ti.<br>
-  📍 Acayucan, Oluta y Soconusco, Veracruz, México
+  <strong>G5 Jerseys MX</strong> © 2026<br>
+  🌐 https://oscaromargp.github.io/G5JerseysMX/<br>
+  📱 WhatsApp: +52 1 612 107 8078<br>
+  🇲🇽 Hecho con ❤️ en México
 </p>

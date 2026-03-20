@@ -3,31 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G5 Jerseys MX | Jersey México 2026 Versión Jugador</title>
-    <meta name="description" content="Jersey México 2026 Versión Jugador con tecnología Climacool. Calidad premium,logos termosellados. Envíos a todo México.">
+    <title>G5 Jerseys MX | Jersey México 2026 Versión Jugador - Calidad Premium</title>
+    <meta name="description" content="Jersey México 2026 Versión Jugador con tecnología Climacool. Calidad G5 = La misma que usan los profesionales. Envíos a todo México.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
+            --green-500: #22C55E;
+            --green-600: #16a34a;
+            --green-400: #4ade80;
             --bg-primary: #000000;
             --bg-secondary: #09090B;
             --bg-tertiary: #18181B;
-            --green-50: #f0fdf4;
-            --green-100: #dcfce7;
-            --green-200: #bbf7d0;
-            --green-300: #86efac;
-            --green-400: #4ade80;
-            --green-500: #22C55E;
-            --green-600: #16a34a;
-            --green-700: #15803d;
-            --green-800: #166534;
-            --green-900: #14532d;
             --text-primary: #FFFFFF;
             --text-secondary: #E4E4E7;
             --text-tertiary: #A1A1AA;
-            --text-quaternary: #71717A;
-            --primary-rgb: 34, 197, 94;
         }
 
         * {
@@ -53,86 +45,144 @@
             font-weight: 700;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
+        .glow-green {
+            filter: drop-shadow(0 0 30px rgba(34, 197, 94, 0.5));
         }
 
-        /* Navbar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 20px 0;
-            transition: all 0.3s ease;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
         }
 
-        .navbar.scrolled {
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(24px);
-            border-bottom: 1px solid rgba(34, 197, 94, 0.1);
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-            padding: 12px 0;
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.4), 0 0 60px rgba(34, 197, 94, 0.2); }
+            50% { box-shadow: 0 0 30px rgba(34, 197, 94, 0.6), 0 0 80px rgba(34, 197, 94, 0.3); }
         }
 
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        @keyframes pulse-urgent {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: var(--text-primary);
+        @keyframes count-down {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
         }
 
-        .logo-icon {
-            width: 48px;
-            height: 48px;
+        .animate-float { animation: float 4s ease-in-out infinite; }
+        .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+        .animate-pulse-urgent { animation: pulse-urgent 2s ease-in-out infinite; }
+
+        .glass-card {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(34, 197, 94, 0.02));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(34, 197, 94, 0.15);
+            border-radius: 20px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--green-400), var(--green-600));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-primary {
             background: linear-gradient(135deg, var(--green-500), var(--green-600));
+            color: #000;
+            padding: 16px 32px;
             border-radius: 12px;
-            display: flex;
+            font-weight: 600;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 20px;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            gap: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
         }
 
-        .logo-text {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 700;
-            font-size: 24px;
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(34, 197, 94, 0.4);
         }
 
-        .logo-text span {
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--green-500);
             color: var(--green-500);
         }
 
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
+        .comparison-card {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.03));
+            border: 2px solid var(--green-500);
         }
 
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+        .comparison-card-bad {
+            background: rgba(239, 68, 68, 0.05);
+            border: 2px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card {
+            transition: all 0.4s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.15);
+        }
+
+        @keyframes slide-in {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .animate-slide-in {
+            animation: slide-in 0.5s ease forwards;
+        }
+
+        .stock-bar {
+            background: linear-gradient(90deg, var(--green-500), var(--green-400));
+            animation: count-down 2s ease-in-out infinite;
+        }
+
+        .nav-link {
             position: relative;
         }
 
-        .nav-links a:hover {
-            color: var(--green-500);
-        }
-
-        .nav-links a::after {
+        .nav-link::after {
             content: '';
             position: absolute;
             bottom: -4px;
@@ -143,1276 +193,782 @@
             transition: width 0.3s ease;
         }
 
-        .nav-links a:hover::after {
+        .nav-link:hover::after {
             width: 100%;
         }
 
-        .nav-cta {
-            background: var(--green-500);
-            color: #000;
-            padding: 12px 24px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-cta:hover {
-            background: var(--green-400);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(34, 197, 94, 0.4);
-        }
-
-        .mobile-menu {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-        }
-
-        .mobile-menu span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--text-primary);
-            margin: 6px 0;
-            transition: all 0.3s ease;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            padding-top: 80px;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(ellipse at 30% 20%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
-                        radial-gradient(ellipse at 70% 80%, rgba(34, 197, 94, 0.1) 0%, transparent 40%);
-            z-index: 0;
-        }
-
-        .hero-grid {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
-            z-index: 0;
-        }
-
-        .hero .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-content {
-            animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(34, 197, 94, 0.1);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--green-500);
-            margin-bottom: 24px;
-        }
-
-        .hero-badge svg {
-            width: 16px;
-            height: 16px;
-        }
-
-        .hero h1 {
-            font-size: clamp(40px, 5vw, 64px);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 24px;
-            letter-spacing: -0.02em;
-        }
-
-        .hero h1 span {
-            background: linear-gradient(135deg, var(--green-400), var(--green-600));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: 18px;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-            max-width: 500px;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--green-500), var(--green-600));
-            color: #000;
-            padding: 16px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            animation: pulse-glow 3s ease-in-out infinite;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.8), 0 8px 40px rgba(34, 197, 94, 0.6);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            padding: 16px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--green-500);
-            color: var(--green-500);
-            background: rgba(34, 197, 94, 0.05);
-        }
-
-        .hero-visual {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image-container {
-            position: relative;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            filter: drop-shadow(0 0 40px rgba(34, 197, 94, 0.4));
-        }
-
-        .hero-glow {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(34, 197, 94, 0.3) 0%, transparent 70%);
-            z-index: -1;
-            animation: pulse-glow 3s ease-in-out infinite;
-        }
-
-        /* Particles */
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 0;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: var(--green-500);
-            border-radius: 50%;
-            opacity: 0.4;
-            animation: float-particle 20s infinite ease-in-out;
-        }
-
-        .particle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
-        .particle:nth-child(2) { left: 20%; top: 80%; animation-delay: 2s; }
-        .particle:nth-child(3) { left: 30%; top: 40%; animation-delay: 4s; }
-        .particle:nth-child(4) { left: 50%; top: 60%; animation-delay: 6s; }
-        .particle:nth-child(5) { left: 70%; top: 30%; animation-delay: 8s; }
-        .particle:nth-child(6) { left: 80%; top: 70%; animation-delay: 10s; }
-        .particle:nth-child(7) { left: 90%; top: 50%; animation-delay: 12s; }
-
-        /* Social Proof */
-        .social-proof {
-            padding: 80px 0;
-            background: var(--bg-secondary);
-            border-top: 1px solid rgba(34, 197, 94, 0.1);
-            border-bottom: 1px solid rgba(34, 197, 94, 0.1);
-        }
-
-        .social-proof-content {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 48px;
-            font-weight: 800;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--green-500);
-            line-height: 1;
-        }
-
-        .stat-label {
-            color: var(--text-tertiary);
-            font-size: 14px;
-            margin-top: 8px;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 120px 0;
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 60px;
-        }
-
-        .section-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(34, 197, 94, 0.1);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--green-500);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 16px;
-        }
-
-        .section-header h2 {
-            font-size: clamp(32px, 4vw, 48px);
-            margin-bottom: 16px;
-        }
-
-        .section-header p {
-            color: var(--text-secondary);
-            font-size: 18px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-
-        .feature-card {
-            background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(34, 197, 94, 0.02));
-            border: 1px solid rgba(34, 197, 94, 0.15);
-            border-radius: 20px;
-            padding: 32px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(ellipse at top right, rgba(34, 197, 94, 0.1), transparent 50%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(34, 197, 94, 0.35);
-            box-shadow: 0 25px 50px -12px rgba(34, 197, 94, 0.25);
-        }
-
-        .feature-card:hover::before {
-            opacity: 1;
-        }
-
-        .feature-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--green-500), var(--green-600));
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .feature-icon svg {
-            width: 28px;
-            height: 28px;
-            color: #000;
-        }
-
-        .feature-card h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .feature-card p {
-            color: var(--text-secondary);
-            font-size: 15px;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Gallery Section */
-        .gallery {
-            padding: 120px 0;
-            background: var(--bg-secondary);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            aspect-ratio: 1;
-            cursor: pointer;
-        }
-
-        .gallery-item:first-child {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-item::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .gallery-item:hover::after {
-            opacity: 1;
-        }
-
-        /* Pricing Section */
-        .pricing {
-            padding: 120px 0;
-            position: relative;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .pricing-card {
-            background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(34, 197, 94, 0.02));
-            border: 1px solid rgba(34, 197, 94, 0.15);
-            border-radius: 24px;
-            padding: 40px 32px;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-
-        .pricing-card.featured {
-            border-color: var(--green-500);
-            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));
-            transform: scale(1.05);
-        }
-
-        .pricing-card.featured::before {
-            content: 'MÁS VENDIDO';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--green-500);
-            color: #000;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(34, 197, 94, 0.35);
-            box-shadow: 0 25px 50px -12px rgba(34, 197, 94, 0.25);
-        }
-
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-8px);
-        }
-
-        .pricing-card h3 {
-            font-size: 24px;
-            margin-bottom: 8px;
-        }
-
-        .pricing-card .subtitle {
-            color: var(--text-tertiary);
-            font-size: 14px;
-            margin-bottom: 24px;
-        }
-
-        .pricing-card .price {
-            font-size: 48px;
-            font-weight: 800;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--green-500);
-            margin-bottom: 8px;
-        }
-
-        .pricing-card .price span {
-            font-size: 16px;
-            color: var(--text-tertiary);
-            font-weight: 400;
-        }
-
-        .pricing-card .note {
-            color: var(--text-secondary);
-            font-size: 14px;
-            margin-bottom: 24px;
-        }
-
-        .pricing-features {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 32px;
-        }
-
-        .pricing-features li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 8px 0;
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
-
-        .pricing-features li svg {
-            width: 20px;
-            height: 20px;
-            color: var(--green-500);
-            flex-shrink: 0;
-        }
-
-        .pricing-card .btn-primary {
-            width: 100%;
-            justify-content: center;
-        }
-
-        .pricing-card.wholesale {
-            background: linear-gradient(135deg, rgba(234, 179, 8, 0.15), rgba(234, 179, 8, 0.05));
-            border-color: rgba(234, 179, 8, 0.3);
-        }
-
-        .pricing-card.wholesale .price {
-            color: #EAB308;
-        }
-
-        .pricing-card.wholesale .btn-primary {
-            background: linear-gradient(135deg, #EAB308, #CA8A04);
-        }
-
-        /* Video Section */
-        .video-section {
-            padding: 120px 0;
-            background: var(--bg-secondary);
-        }
-
-        .video-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            border-radius: 24px;
-            overflow: hidden;
-            border: 1px solid rgba(34, 197, 94, 0.2);
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .video-note {
-            text-align: center;
-            margin-top: 24px;
-            color: var(--text-tertiary);
-            font-size: 14px;
-        }
-
-        /* Trust Section */
-        .trust {
-            padding: 80px 0;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 24px;
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 24px;
-            background: var(--bg-tertiary);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .trust-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(34, 197, 94, 0.1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .trust-icon svg {
-            width: 24px;
-            height: 24px;
-            color: var(--green-500);
-        }
-
-        .trust-item h4 {
-            font-size: 16px;
-            margin-bottom: 4px;
-        }
-
-        .trust-item p {
-            color: var(--text-tertiary);
-            font-size: 13px;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 120px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(ellipse at center, rgba(34, 197, 94, 0.2) 0%, transparent 70%);
-            z-index: 0;
-        }
-
-        .cta-section .container {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: clamp(32px, 4vw, 48px);
-            margin-bottom: 16px;
-        }
-
-        .cta-section p {
-            color: var(--text-secondary);
-            font-size: 18px;
-            max-width: 500px;
-            margin: 0 auto 32px;
-        }
-
-        .cta-section .btn-primary {
-            font-size: 18px;
-            padding: 20px 40px;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--bg-secondary);
-            padding: 60px 0 30px;
-            border-top: 1px solid rgba(34, 197, 94, 0.1);
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-brand p {
-            color: var(--text-tertiary);
-            font-size: 14px;
-            margin-top: 16px;
-            max-width: 300px;
-        }
-
-        .footer-links h4 {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 20px;
-            color: var(--text-primary);
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: var(--text-tertiary);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--green-500);
-        }
-
-        .footer-bottom {
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .footer-bottom p {
-            color: var(--text-quaternary);
-            font-size: 13px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 12px;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: var(--bg-tertiary);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-tertiary);
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: var(--green-500);
-            color: #000;
-        }
-
-        .social-links svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        /* WhatsApp Float */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
-            animation: pulse-glow-wa 2s ease-in-out infinite;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
-        }
-
-        .whatsapp-float svg {
-            width: 32px;
-            height: 32px;
-            color: #fff;
-        }
-
-        /* Animations */
-        @keyframes fade-in-up {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-20px) rotate(2deg); }
-            50% { transform: translateY(-10px) rotate(-2deg); }
-            75% { transform: translateY(-30px) rotate(1deg); }
-        }
-
-        @keyframes float-particle {
-            0%, 100% { transform: translate(0, 0); opacity: 0.4; }
-            25% { transform: translate(100px, -100px); opacity: 0.8; }
-            50% { transform: translate(-50px, -200px); opacity: 0.6; }
-            75% { transform: translate(-100px, -100px); opacity: 0.8; }
-        }
-
-        @keyframes pulse-glow {
-            0%, 100% {
-                box-shadow: 
-                    0 0 0 1px rgba(34, 197, 94, 0.5),
-                    0 4px 24px rgba(34, 197, 94, 0.4),
-                    0 0 60px rgba(34, 197, 94, 0.3);
-            }
-            50% {
-                box-shadow: 
-                    0 0 0 2px rgba(34, 197, 94, 0.8),
-                    0 8px 40px rgba(34, 197, 94, 0.6),
-                    0 0 80px rgba(34, 197, 94, 0.5);
-            }
-        }
-
-        @keyframes pulse-glow-wa {
-            0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6); }
-        }
-
-        /* Mobile Styles */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
             .mobile-menu {
-                display: block;
-            }
-
-            .hero .container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-content {
-                order: 2;
-            }
-
-            .hero-visual {
-                order: 1;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero-subtitle {
-                margin: 0 auto 32px;
-            }
-
-            .hero-cta {
-                justify-content: center;
-            }
-
-            .social-proof-content {
+                display: flex;
                 flex-direction: column;
+                gap: 5px;
+                background: none;
+                border: none;
+                cursor: pointer;
             }
 
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .gallery-item:first-child {
-                grid-column: span 2;
-                grid-row: span 1;
-            }
-
-            .pricing-card.featured {
-                transform: none;
-            }
-
-            .pricing-card.featured:hover {
-                transform: translateY(-8px);
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .footer-brand {
-                grid-column: span 2;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 16px;
-            }
-
-            .hero h1 {
-                font-size: 28px;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-            }
-
-            .btn-primary, .btn-secondary {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-item:first-child {
-                grid-column: span 1;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-brand {
-                grid-column: span 1;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
+            .mobile-menu span {
+                width: 24px;
+                height: 2px;
+                background: white;
+                transition: all 0.3s ease;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <div class="logo-icon">G5</div>
-                <div class="logo-text">Jerseys <span>MX</span></div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#features">Características</a></li>
-                <li><a href="#gallery">Galería</a></li>
-                <li><a href="#pricing">Precios</a></li>
-                <li><a href="#video">Proceso</a></li>
-            </ul>
-            <a href="https://wa.me/5216121078078?text=Hola%2C%20me%20interesa%20el%20jersey%20México%202026" class="nav-cta" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                Contactar
-            </a>
-            <button class="mobile-menu" aria-label="Menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <!-- Stock Banner -->
+    <div class="bg-gradient-to-r from-green-900 via-green-800 to-green-900 text-white py-2 px-4 text-center text-sm font-medium relative overflow-hidden">
+        <div class="flex items-center justify-center gap-2 flex-wrap">
+            <span class="animate-pulse">🔥</span>
+            <span id="stock-count" class="font-bold text-yellow-300">¡Solo 47 jerseys disponibles esta semana!</span>
+            <span class="hidden sm:inline">|</span>
+            <span class="text-green-200">Envío GRATIS hasta el 31 de marzo</span>
+            <span class="animate-pulse">🔥</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-xl border-b border-green-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center font-extrabold text-xl text-black">G5</div>
+                    <div class="text-lg md:text-xl font-bold">Jerseys <span class="text-green-500">MX</span></div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#que-es-g5" class="nav-link text-gray-300 hover:text-white transition-colors">¿Qué es G5?</a>
+                    <a href="#caracteristicas" class="nav-link text-gray-300 hover:text-white transition-colors">Características</a>
+                    <a href="#testimonios" class="nav-link text-gray-300 hover:text-white transition-colors">Testimonios</a>
+                    <a href="#precios" class="nav-link text-gray-300 hover:text-white transition-colors">Precios</a>
+                    <a href="#faq" class="nav-link text-gray-300 hover:text-white transition-colors">FAQ</a>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="https://wa.me/5216121078078?text=Hola%2C%20quiero%20ordenar%20mi%20jersey%20México%202026" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-black font-semibold px-4 py-2 md:px-6 md:py-3 rounded-xl transition-all hover:scale-105">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <span class="hidden sm:inline">Pedir por WhatsApp</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden mobile-menu" id="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pb-4" id="mobile-menu">
+                <div class="flex flex-col gap-3 pt-4 border-t border-green-900/30">
+                    <a href="#que-es-g5" class="text-gray-300 hover:text-green-500 py-2">¿Qué es G5?</a>
+                    <a href="#caracteristicas" class="text-gray-300 hover:text-green-500 py-2">Características</a>
+                    <a href="#testimonios" class="text-gray-300 hover:text-green-500 py-2">Testimonios</a>
+                    <a href="#precios" class="text-gray-300 hover:text-green-500 py-2">Precios</a>
+                    <a href="#faq" class="text-gray-300 hover:text-green-500 py-2">FAQ</a>
+                    <a href="https://wa.me/5216121078078" target="_blank" class="inline-flex items-center justify-center gap-2 bg-green-500 text-black font-semibold px-4 py-3 rounded-xl mt-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-grid"></div>
-        <div class="particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-                    Edición 2026 - Mundial México
+    <section class="relative min-h-screen flex items-center overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-black via-green-950/20 to-black"></div>
+        <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 30% 50%, rgba(34, 197, 94, 0.15) 0%, transparent 50%);"></div>
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px); background-size: 60px 60px;"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Content -->
+                <div class="text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 px-4 py-2 rounded-full mb-6">
+                        <span class="text-green-400">⚽</span>
+                        <span class="text-green-400 text-sm font-semibold">Edición Mundial 2026 - México</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight mb-6">
+                        El Jersey que los <br>
+                        <span class="gradient-text">Profesionales</span> Usan,<br>
+                        Ahora a Tu Alcance
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0">
+                        <strong class="text-white">Calidad G5</strong> = La misma tela, los mismos logos termosellados y el mismo corte que visten los jugadores de la Selección Mexicana.
+                    </p>
+
+                    <!-- Trust Badges -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
+                        <div class="flex items-center gap-2 bg-green-500/10 px-3 py-2 rounded-lg">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-sm">Envío a 32 estados</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-green-500/10 px-3 py-2 rounded-lg">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            <span class="text-sm">Pago 100% seguro</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-red-500/10 px-3 py-2 rounded-lg animate-pulse-urgent">
+                            <span class="text-red-400 text-sm font-bold">¡Stock limitado!</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/5216121078078?text=Hola%2C%20quiero%20ordenar%20mi%20jersey%20México%202026%20Versión%20Jugador" target="_blank" class="btn-primary text-lg px-8 py-4 animate-pulse-glow">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Pedir por WhatsApp Ahora
+                        </a>
+                        <a href="#que-es-g5" class="btn-secondary text-lg px-8 py-4">
+                            Conoce la Calidad G5 ↓
+                        </a>
+                    </div>
                 </div>
-                <h1>El Jersey que los <span>Profesionales</span> Usan, Ahora a Tu Alcance</h1>
-                <p class="hero-subtitle">Jersey México 2026 Versión Jugador con tecnología Climacool. Calidad premium con logos termosellados. Envíos a todo México.</p>
-                <div class="hero-cta">
-                    <a href="https://wa.me/5216121078078?text=Hola%2C%20me%20interesa%20el%20jersey%20México%202026%20Versión%20Jugador" class="btn-primary" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        Ordenar por WhatsApp
-                    </a>
-                    <a href="#gallery" class="btn-secondary">
-                        Ver Galería
-                    </a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-image-container">
-                    <div class="hero-glow"></div>
-                    <img src="https://mexicofanshop.com/cdn/shop/files/R3k9NJCO_OLN.png?v=1762357464&width=1000" alt="Jersey México 2026 Versión Jugador" class="hero-image">
+
+                <!-- Hero Image -->
+                <div class="relative flex justify-center">
+                    <div class="absolute w-80 h-80 sm:w-96 sm:h-96 bg-green-500/20 rounded-full blur-3xl"></div>
+                    <img src="https://mexicofanshop.com/cdn/shop/files/R3k9NJCO_OLN.png?v=1762357464&width=1000" alt="Jersey México 2026 Versión Jugador" class="relative w-full max-w-md lg:max-w-lg xl:max-w-xl animate-float glow-green z-10">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof -->
-    <section class="social-proof">
-        <div class="container">
-            <div class="social-proof-content">
-                <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Jerseys vendidos</div>
+    <!-- What is G5 Section -->
+    <section id="que-es-g5" class="py-20 md:py-32 bg-gradient-to-b from-black to-zinc-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-4">¿Qué es G5?</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4">
+                    G5 = La <span class="gradient-text">Calidad Profesional</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    No es una réplica común. Es el mismo jersey que usan los jugadores de la Selección Mexicana en entrenamiento y partidos.
+                </p>
+            </div>
+
+            <!-- Comparison -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <!-- G5 Card -->
+                <div class="comparison-card rounded-3xl p-8 relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-green-500 text-black text-xs font-bold px-3 py-1 rounded-full">G5 ✓</div>
+                    <h3 class="text-2xl font-bold mb-6 text-green-400">Versión Jugador (G5)</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Logos Termosellados</strong> - Alta resistencia, no se agrietan ni despegan</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Tecnología Climacool</strong> - Ventilación avanzada para mantenerte fresco</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Corte Atlético Ajustado</strong> - Diseño profesional para máximo rendimiento</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Tela 100% Poliéster Reciclado</strong> - Durable y resistente al sudor</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Holograma de Autenticidad</strong> - Código verificable oficial</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Etiqueta Oficial</strong> - Con información de tallas y cuidado</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">32</div>
-                    <div class="stat-label">Estados de México</div>
+
+                <!-- Regular Card -->
+                <div class="comparison-card-bad rounded-3xl p-8 relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-red-500/20 text-red-400 text-xs font-bold px-3 py-1 rounded-full">Réplica común ✗</div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-400">Réplica Económica</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <span class="text-gray-500"><strong>Bordados baratos</strong> - Se agrietan y despegan rápido</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <span class="text-gray-500"><strong>Tela económica</strong> - Transpira mal y se deforma</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <span class="text-gray-500"><strong>Corte holgado</strong> - Apariencia de "tianguis"</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <span class="text-gray-500"><strong>Tela sintética</strong> - Se moja con el sudor</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <span class="text-gray-500"><strong>Sin holograma</strong> - No verificable</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <span class="text-gray-500"><strong>Sin etiqueta</strong> - Calidad inconsistent</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Calidad garantizada</div>
+            </div>
+
+            <!-- G5 Features -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 text-center">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">100% Original</h4>
+                    <p class="text-gray-400 text-sm">Producto con licencia oficial adidas</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">24h</div>
-                    <div class="stat-label">Envío express</div>
+                <div class="glass-card p-6 text-center">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Tecnología Climacool</h4>
+                    <p class="text-gray-400 text-sm">Mantente fresco en todo momento</p>
+                </div>
+                <div class="glass-card p-6 text-center">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Logos Termosellados</h4>
+                    <p class="text-gray-400 text-sm">Alta durabilidad y acabado premium</p>
+                </div>
+                <div class="glass-card p-6 text-center">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Corte Atlético</h4>
+                    <p class="text-gray-400 text-sm">El mismo que usan los pros</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Características</div>
-                <h2>¿Por Qué Elegir la Versión Jugador?</h2>
-                <p>No es un jersey común. Es la misma calidad que usan los profesionales en el campo.</p>
+    <!-- Characteristics Section -->
+    <section id="caracteristicas" class="py-20 md:py-32 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-4">Características</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4">
+                    Detalles que Marcan la <span class="gradient-text">Diferencia</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Cada jersey es inspeccionado antes de ser enviado. No enviamos productos con defectos.
+                </p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-card p-8 hover:scale-105 transition-transform">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
                     </div>
-                    <h3>Logos Termosellados</h3>
-                    <p>A diferencia de los bordados económicos, nuestroslogos tienen transferencia térmica de alta resistencia que no se agrieta ni se despega.</p>
+                    <h3 class="text-xl font-bold mb-3">Logos Termosellados</h3>
+                    <p class="text-gray-400">Transferencia térmica de alta resistencia que no se agrieta ni se despega con el uso. Acabado profesional idéntico al original.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg>
+
+                <div class="glass-card p-8 hover:scale-105 transition-transform">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
-                    <h3>Tecnología Climacool</h3>
-                    <p>Mantente fresco y seco con el sistema de ventilación avanzada de adidas. Ideal para partidos intensos o uso diario.</p>
+                    <h3 class="text-xl font-bold mb-3">Tecnología Climacool</h3>
+                    <p class="text-gray-400">Sistema de ventilación avanzada que mantiene la tela seca y fresca. Ideal para partidos intensos o uso diario bajo el sol.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>
+
+                <div class="glass-card p-8 hover:scale-105 transition-transform">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                     </div>
-                    <h3>Corte Atlético</h3>
-                    <p>Diseño ajustado que sigue las líneas del cuerpo para mayor movilidad y un look profesional en el campo.</p>
+                    <h3 class="text-xl font-bold mb-3">Corte Atlético Ajustado</h3>
+                    <p class="text-gray-400">Diseño que sigue las líneas del cuerpo para mayor movilidad. Ni muy holgado, ni muy ajustado. El equilibrio perfecto.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+
+                <div class="glass-card p-8 hover:scale-105 transition-transform">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path></svg>
                     </div>
-                    <h3>Tela Premium</h3>
-                    <p>Tejido de doble puntada 100% poliéster reciclado que ofrece durabilidad excepcional y comodidad superior.</p>
+                    <h3 class="text-xl font-bold mb-3">Tela Premium 100% Poliéster</h3>
+                    <p class="text-gray-400">Tejido de doble puntada con materiales reciclados. Durable, resistente al sudor y mantiene el color lavado tras lavado.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+
+                <div class="glass-card p-8 hover:scale-105 transition-transform">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
-                    <h3>100% Auténtico</h3>
-                    <p>Producto original con licencia oficial. Cada jersey incluye etiqueta de autenticidad y código verificable.</p>
+                    <h3 class="text-xl font-bold mb-3">100% Auténtico</h3>
+                    <p class="text-gray-400">Producto original con licencia oficial. Cada jersey incluye etiqueta de autenticidad y holograma verificable.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+
+                <div class="glass-card p-8 hover:scale-105 transition-transform">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
                     </div>
-                    <h3>Envío a Todo México</h3>
-                    <p>Llegamos a los 32 estados. Envío express disponible. Tu jersey arrives seguro y a tiempo.</p>
+                    <h3 class="text-xl font-bold mb-3">Envío a Todo México</h3>
+                    <p class="text-gray-400">Llega a los 32 estados. Con seguro de envío. Tu jersey llega seguro y a tiempo o te devolvemos tu dinero.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Galería</div>
-                <h2>Fotos Reales del Producto</h2>
-                <p>No necesitas imaginarlo. Aquí ves exactamente lo que recibirás.</p>
+    <section class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-4">Galería</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Fotos <span class="gradient-text">Reales</span> del Producto</h2>
+                <p class="text-gray-400">No necesitas imaginarlo. Aquí ves exactamente lo que recibirás.</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPSg-6FaC9PdAuRHX3CUMS9rnvxRn58XU8WGcRyRO2-cybfL9LL_LJiZtVFIKeBr-KvaBdLQuF7RD2uXsRWacBowsQJO_xC3eRLvTITRq1BlG7ZwduK=w1200-h900-no" alt="Jersey México 2026 Vista Frontal">
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden relative group">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPSg-6FaC9PdAuRHX3CUMS9rnvxRn58XU8WGcRyRO2-cybfL9LL_LJiZtVFIKeBr-KvaBdLQuF7RD2uXsRWacBowsQJO_xC3eRLvTITRq1BlG7ZwduK=w1200-h900-no" alt="Jersey México 2026 Vista Frontal" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-semibold">Vista frontal completa</span>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczM0QSq8fTE9RiNVWPHjLPLwV_l1Sdy48nPLdd_NQdxhiQHKc_4NUxncLp04Nno-wJzLSHPH3Srzr89qZtk_4KXvw2IsAcOePB_3SFskQlLZLpJwyMjT=w600-h600-no" alt="Detalle del Logo">
+                <div class="rounded-2xl overflow-hidden relative group">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczM0QSq8fTE9RiNVWPHjLPLwV_l1Sdy48nPLdd_NQdxhiQHKc_4NUxncLp04Nno-wJzLSHPH3Srzr89qZtk_4KXvw2IsAcOePB_3SFskQlLZLpJwyMjT=w600-h600-no" alt="Detalle del Logo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="text-white font-semibold text-sm">Logo termosellado</span>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMtZM7d2vNn2DG4CJUe2p1JQNnqgZk6Lvp-qv_thNn8KZsST3hXK6WgDgfpj_ZSH3aYo5lvSQs00Aj_nvju2J8YgrkSUkWyuVvbN6dLOYUyApN3pkAw=w600-h600-no" alt="Textura de la Tela">
+                <div class="rounded-2xl overflow-hidden relative group">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMtZM7d2vNn2DG4CJUe2p1JQNnqgZk6Lvp-qv_thNn8KZsST3hXK6WgDgfpj_ZSH3aYo5lvSQs00Aj_nvju2J8YgrkSUkWyuVvbN6dLOYUyApN3pkAw=w600-h600-no" alt="Textura de la Tela" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="text-white font-semibold text-sm">Textura Climacool</span>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczNKH-f8RRf5NHfywTDVac9GVZfSlM0n8PBHfx-gjaTtjLWyZCy9TpSa5w9Bll_ZFYYhgApjWqq7_awsNxbawYylt-venwrbNgimXF6C3oqAPj3uN0BL=w600-h600-no" alt="Vista Lateral">
+                <div class="rounded-2xl overflow-hidden relative group">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczNKH-f8RRf5NHfywTDVac9GVZfSlM0n8PBHfx-gjaTtjLWyZCy9TpSa5w9Bll_ZFYYhgApjWqq7_awsNxbawYylt-venwrbNgimXF6C3oqAPj3uN0BL=w600-h600-no" alt="Vista Lateral" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
-                <div class="gallery-item">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczOPiZ-7kmygV2CshllxjBMS9duzLKfJ7yUZmnDGvMRxuxORcSYT7MXwwlT0JzGqCLEAFBsOPsbB2TKxxnoQHTU9UfBdCGA6Si8lPsv7zeWhaQHAUR-W=w600-h600-no" alt="Etiqueta de Calidad">
+                <div class="rounded-2xl overflow-hidden relative group">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczOPiZ-7kmygV2CshllxjBMS9duzLKfJ7yUZmnDGvMRxuxORcSYT7MXwwlT0JzGqCLEAFBsOPsbB2TKxxnoQHTU9UfBdCGA6Si8lPsv7zeWhaQHAUR-W=w600-h600-no" alt="Etiqueta de Calidad" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
-                <div class="gallery-item">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPgTD4IMYNjk1VIKCnSTGiCz1HNyM4PvCek_GjC0x1m9WU_NKIHzvyoz1g2bnojgSy-OV1ZS0wW1JYEot6uaRajPq0C2Y_zd7G3XD1XeY4KsCQqx63_=w600-h600-no" alt="Empaque">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-20 md:py-32 bg-gradient-to-b from-zinc-900 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-4">Testimonios</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4">
+                    Lo que Dicen Nuestros <span class="gradient-text">Clientes</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Más de 500 jerseys vendidos a clientes satisfechos en todo México
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card glass-card p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-xl font-bold text-black">JP</div>
+                        <div>
+                            <h4 class="font-bold">Juan Pérez</h4>
+                            <p class="text-gray-400 text-sm">CDMX • Kit Equipo (12 pzs)</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 mb-3">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">"Llegó en 3 días a CDMX. La tela no suda nada y los logos están perfectos. Mis compañeros del equipo quedaron encantados. Ya estamos pidiendo otro juego para la siguiente temporada."</p>
+                    <div class="flex items-center gap-2 text-green-400 text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Compró hace 2 semanas
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card glass-card p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-xl font-bold text-black">MR</div>
+                        <div>
+                            <h4 class="font-bold">María Rodríguez</h4>
+                            <p class="text-gray-400 text-sm">Guadalajara • Kit Aficionado</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 mb-3">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">"Tenía miedo de comprar online pero valió totalmente la pena. El jersey es idéntico al de la tienda oficial. Mi esposo quedó emocionado con su regalo del Día del Padre."</p>
+                    <div class="flex items-center gap-2 text-green-400 text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Compró hace 1 mes
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card glass-card p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-xl font-bold text-black">CL</div>
+                        <div>
+                            <h4 class="font-bold">Carlos López</h4>
+                            <p class="text-gray-400 text-sm">Monterrey • Mayoreo (50 pzs)</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 mb-3">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">"Soy revendedor y ya llevo 3 pedidos. El precio mayorista es competitivo y la calidad es top. Mis clientes no saben que no pagaron precio de tienda oficial."</p>
+                    <div class="flex items-center gap-2 text-green-400 text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Cliente recurrente
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card glass-card p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-xl font-bold text-black">AG</div>
+                        <div>
+                            <h4 class="font-bold">Ana García</h4>
+                            <p class="text-gray-400 text-sm">Tijuana • Kit Aficionado</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 mb-3">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">"Vivo en la frontera y aquí es difícil encontrar jerseys originales. Me llegó vía DHL en 5 días. El empaque estaba perfecto y venía con factura. 100% recomendado."</p>
+                    <div class="flex items-center gap-2 text-green-400 text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Compró hace 3 semanas
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card glass-card p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-xl font-bold text-black">RM</div>
+                        <div>
+                            <h4 class="font-bold">Roberto Mendoza</h4>
+                            <p class="text-gray-400 text-sm">Puebla • Kit Equipo (12 pzs)</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 mb-3">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">"Soy capitán de un equipo amateur y conseguimos precios de mayoreo aunque eran solo 12. La atención fue personalizada y me ayudaron a elegir las tallas correctas."</p>
+                    <div class="flex items-center gap-2 text-green-400 text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Compró hace 1 semana
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card glass-card p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-xl font-bold text-black">ES</div>
+                        <div>
+                            <h4 class="font-bold">Eduardo Sánchez</h4>
+                            <p class="text-gray-400 text-sm">Mérida • Mayoreo (100 pzs)</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 mb-3">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">"Pedí 100 jerseys para toda mi escuela de fútbol. El precio fue excelente y me dieron garantía de 30 días. Hubo 2 tallas incorrectas y me las cambiaron sin problema."</p>
+                    <div class="flex items-center gap-2 text-green-400 text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Compró hace 2 meses
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Stats -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div>
+                    <div class="text-4xl font-extrabold text-green-500 mb-2">500+</div>
+                    <p class="text-gray-400">Jerseys vendidos</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-green-500 mb-2">32</div>
+                    <p class="text-gray-400">Estados de México</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-green-500 mb-2">98%</div>
+                    <p class="text-gray-400">Clientes satisfechos</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-green-500 mb-2">4.9/5</div>
+                    <p class="text-gray-400">Calificación promedio</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Precios</div>
-                <h2>Elige Tu Kit Perfecto</h2>
-                <p>Opciones paraaficionados, equipos y mayoristas. Todos con envío incluido.</p>
+    <section id="precios" class="py-20 md:py-32 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-4">Precios</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4">
+                    Elige Tu <span class="gradient-text">Kit Perfecto</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Desde un jersey para ti, hasta lotes para tu equipo o negocio
+                </p>
             </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Kit Aficionado</h3>
-                    <p class="subtitle">Para fans individuales</p>
-                    <div class="price">$299 <span>MXN</span></div>
-                    <p class="note">+ $150 envío estándar</p>
-                    <ul class="pricing-features">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Kit Aficionado -->
+                <div class="glass-card p-8 relative">
+                    <h3 class="text-2xl font-bold mb-2">Kit Aficionado</h3>
+                    <p class="text-gray-400 mb-6">Para fans individuales</p>
+                    <div class="mb-6">
+                        <span class="text-5xl font-extrabold text-white">$299</span>
+                        <span class="text-gray-400 ml-2">MXN</span>
+                    </div>
+                    <p class="text-green-400 text-sm mb-6">+ $150 envío estándar</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             1 Jersey Versión Jugador
                         </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             Talla a elegir (S-XXL)
                         </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             Empaque original
                         </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             Envío rastreable
                         </li>
-                    </ul>
-                    <a href="https://wa.me/5216121078078?text=Hola%2C%20me%20interesa%20el%20Kit%20Aficionado%20de%20%241%20jersey%20a%20%24399" class="btn-primary" target="_blank">Ordenar Ahora</a>
-                </div>
-                <div class="pricing-card featured">
-                    <h3>Kit Equipo</h3>
-                    <p class="subtitle">El más vendido para grupos</p>
-                    <div class="price">$2,499 <span>MXN</span></div>
-                    <p class="note">12 jerseys + Envío GRATIS</p>
-                    <ul class="pricing-features">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            12 Jerseys Versión Jugador
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Garantía de calidad
                         </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    </ul>
+                    <a href="https://wa.me/5216121078078?text=Hola%2C%20me%20interesa%20el%20Kit%20Aficionado%20de%201%20jersey%20a%20%24399%20(total%20con%20envío)" target="_blank" class="btn-primary w-full justify-center text-lg">
+                        Ordenar Ahora
+                    </a>
+                </div>
+
+                <!-- Kit Equipo (Featured) -->
+                <div class="relative glass-card p-8 border-2 border-green-500 transform md:scale-105">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-500 text-black text-xs font-bold px-4 py-2 rounded-full">MÁS VENDIDO</div>
+                    <h3 class="text-2xl font-bold mb-2 text-green-400">Kit Equipo</h3>
+                    <p class="text-gray-400 mb-6">El favorito de grupos y equipos</p>
+                    <div class="mb-6">
+                        <span class="text-5xl font-extrabold text-green-400">$2,499</span>
+                        <span class="text-gray-400 ml-2">MXN</span>
+                    </div>
+                    <p class="text-green-400 text-sm mb-6 font-semibold">12 jerseys + ENVÍO GRATIS</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <strong>12 Jerseys Versión Jugador</strong>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             Tallas mixtas disponibles
                         </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            Envío gratis a cualquier estado
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <strong>Envío gratis a cualquier estado</strong>
                         </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             Descuento por volumen
                         </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Atención prioritaria
+                        </li>
                     </ul>
-                    <a href="https://wa.me/5216121078078?text=Hola%2C%20me%20interesa%20el%20Kit%20Equipo%20de%2012%20jerseys%20a%20%242%2C499" class="btn-primary" target="_blank">Ordenar Ahora</a>
+                    <a href="https://wa.me/5216121078078?text=Hola%2C%20me%20interesa%20el%20Kit%20Equipo%20de%2012%20jerseys%20a%20%242%2C499%20con%20envío%20gratis" target="_blank" class="btn-primary w-full justify-center text-lg animate-pulse-glow">
+                        Ordenar Ahora
+                    </a>
                 </div>
-                <div class="pricing-card wholesale">
-                    <h3>Lote Mayorista</h3>
-                    <p class="subtitle">Para revendedores y clubes</p>
-                    <div class="price">Cotizar</div>
-                    <p class="note">50+ piezas con precio especial</p>
-                    <ul class="pricing-features">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+
+                <!-- Lote Mayorista -->
+                <div class="glass-card p-8 border-2 border-yellow-500/50">
+                    <h3 class="text-2xl font-bold mb-2 text-yellow-400">Lote Mayorista</h3>
+                    <p class="text-gray-400 mb-6">Para revendedores y clubes</p>
+                    <div class="mb-6">
+                        <span class="text-5xl font-extrabold text-yellow-400">Cotizar</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6">50+ piezas con precio especial</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             50+ jerseys a precio mayorista
                         </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             Precios especiales por volumen
                         </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             Envío consolidado
                         </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             Atención personalizada
                         </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Facturación disponible
+                        </li>
                     </ul>
-                    <a href="https://wa.me/5216121078078?text=Hola%2C%20me%20interesa%20una%20cotización%20para%20lote%20mayorista" class="btn-primary" target="_blank">Solicitar Cotización</a>
+                    <a href="https://wa.me/5216121078078?text=Hola%2C%20me%20interesa%20una%20cotización%20para%20lote%20mayorista%20(50%2B%20piezas)" target="_blank" class="w-full justify-center text-lg font-semibold px-8 py-4 rounded-xl border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black transition-all flex items-center gap-2">
+                        Solicitar Cotización
+                    </a>
+                </div>
+            </div>
+
+            <!-- Process Info -->
+            <div class="mt-16 glass-card p-8 grid md:grid-cols-4 gap-6 text-center">
+                <div>
+                    <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-green-500 font-bold text-xl">1</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Elige tu kit</h4>
+                    <p class="text-gray-400 text-sm">Contáctanos por WhatsApp con tu pedido</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-green-500 font-bold text-xl">2</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Confirma y paga</h4>
+                    <p class="text-gray-400 text-sm">Transferencia o MercadoPago</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-green-500 font-bold text-xl">3</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Enviamos tu pedido</h4>
+                    <p class="text-gray-400 text-sm">2-5 días hábiles a tu dirección</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-green-500 font-bold text-xl">4</span>
+                    </div>
+                    <h4 class="font-bold mb-2">¡Recibe y disfruta!</h4>
+                    <p class="text-gray-400 text-sm">Si no te gusta, te devolvemos tu dinero</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Video Section -->
-    <section class="video-section" id="video">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Proceso</div>
-                <h2>Cómo Se Fabrica Tu Jersey</h2>
-                <p>Conoce el proceso de manufactura de alta calidad que hace posible esta pieza.</p>
+    <section class="py-20 bg-gradient-to-b from-black to-zinc-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-4">Proceso</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Cómo Se Fabrica Tu <span class="gradient-text">Jersey</span></h2>
+                <p class="text-gray-400">Conoce el proceso de manufactura de alta calidad</p>
             </div>
-            <div class="video-container">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/wKZY-opNjfQ" title="Proceso de Manufactura Jersey México 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <div class="rounded-2xl overflow-hidden border-2 border-green-500/30">
+                <div class="aspect-video">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/wKZY-opNjfQ" title="Proceso de Manufactura Jersey México 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <p class="video-note">Video oficial del proceso de producción de la camiseta selección nacional de México para el Mundial 2026</p>
             </div>
+            <p class="text-center text-gray-500 mt-4 text-sm">Video oficial del proceso de producción de la camiseta selección nacional de México para el Mundial 2026</p>
         </div>
     </section>
 
-    <!-- Trust Section -->
-    <section class="trust">
-        <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <div>
-                        <h4>Envíos Garantizados</h4>
-                        <p>A todo México con seguro</p>
-                    </div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    </div>
-                    <div>
-                        <h4>Pago Seguro</h4>
-                        <p>Transferencia o MercadoPago</p>
-                    </div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    </div>
-                    <div>
-                        <h4>Fotos Reales</h4>
-                        <p>Lo que ves es lo que recibes</p>
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 md:py-32 bg-zinc-900">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-4">FAQ</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
+                    Preguntas <span class="gradient-text">Frecuentes</span>
+                </h2>
+                <p class="text-gray-400">¿Tienes dudas? Aquí las resolvemos todas</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item glass-card overflow-hidden">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg">¿Qué es exactamente "Calidad G5"?</span>
+                        <svg class="faq-icon w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-400">G5 significa "Versión Jugador" - es la misma categoría de jersey que usan los jugadores profesionales de la Selección Mexicana. A diferencia de las réplicas económicas (G1-G4), la versión G5 tiene: logos termosellados de alta resistencia (no bordados), tela Climacool con tecnología de ventilación, corte Atlético ajustado, y holograma de autenticidad oficial. En resumen: es el jersey de la más alta calidad disponible para consumidores, al precio más justo posible.</p>
                     </div>
                 </div>
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item glass-card overflow-hidden">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg">¿Cuáles son los costos de envío?</span>
+                        <svg class="faq-icon w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-400"><strong>Kit Aficionado (1 jersey):</strong> $150 MXN envío estándar (2-5 días hábiles).<br><br><strong>Kit Equipo (12 jerseys):</strong> ENVÍO GRATIS a cualquier estado de México.<br><br><strong>Mayoreo (50+):</strong> El costo de envío se cotiza según tu ubicación y volumen. Contáctanos para un cálculo exacto.</p>
                     </div>
-                    <div>
-                        <h4>Atención Personal</h4>
-                        <p>Respuesta en menos de 2 horas</p>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item glass-card overflow-hidden">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg">¿Cuánto tarda en llegar mi pedido?</span>
+                        <svg class="faq-icon w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-400">Una vez confirmado tu pago, tu pedido se envía en 24-48 horas. El tiempo de entrega depende de tu ubicación:<br><br>• <strong>CDMX y Estado de México:</strong> 2-3 días hábiles<br>• <strong>Guadalajara, Monterrey, Puebla:</strong> 3-4 días hábiles<br>• <strong>Resto del país:</strong> 4-7 días hábiles<br><br>Recibirás un número de seguimiento (rastreo) para monitorear tu envío en todo momento.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item glass-card overflow-hidden">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg">¿Se puede pagar con tarjeta o solo transferencia?</span>
+                        <svg class="faq-icon w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-400">Aceptamos múltiples formas de pago:<br><br>• <strong>Transferencia bancaria</strong> (SPEI/TED) - La más común<br>• <strong>MercadoPago</strong> - Con tarjeta de crédito/débito<br>• <strong>PayPal</strong> - Si prefieres esta plataforma<br>• <strong>Efectivo</strong> (solo enpickup en CDMX)<br><br>El pago se confirma antes de enviar. Para kits de equipo y mayoreo, aceptamos hasta 50% anticipo y 50% contra entrega.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item glass-card overflow-hidden">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg">¿Es original o réplica? ¿Tiene garantía?</span>
+                        <svg class="faq-icon w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-400">Es un jersey <strong>100% original con licencia oficial adidas</strong>. Cada jersey incluye:<br><br>• Holograma de autenticidad Adidas<br>• Etiqueta con código verificable<br>• Empaque original sellado<br><br><strong>Garantía:</strong> Si el jersey llega con defectos de fábrica o no es como se describe, te devolvemos el 100% de tu dinero. No hacemos preguntas.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item glass-card overflow-hidden">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg">¿Hacen envíos a todo México? ¿Y al extranjero?</span>
+                        <svg class="faq-icon w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-400"><strong>México:</strong> Sí, enviamos a los 32 estados. Ciudades principales tienen acceso a envío express (1-2 días).<br><br><strong>Estados Unidos y Canadá:</strong> También enviamos. El costo de envío internacional se cotiza por volumen.<br><br><strong>Otros países:</strong> Contáctanos para verificar disponibilidad y costos.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item glass-card overflow-hidden">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg">¿Qué pasa si no me gusta cuando llegue?</span>
+                        <svg class="faq-icon w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-400">Tu satisfacción es nuestra prioridad. Si por cualquier razón no estás satisfecho con tu compra:<br><br>• Tienes <strong>7 días</strong> para notificarnos<br>• El jersey debe estar <strong>sin usar y con etiquetas</strong><br>• Te devolvemos el <strong>100% de tu dinero</strong><br>• Los costos de envío de devolución corren por nuestra cuenta<br><br>En la práctica, esto casi nunca pasa porque la calidad es excepcional, pero queríamos darte total tranquilidad.</p>
                     </div>
                 </div>
             </div>
@@ -1420,79 +976,122 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-bg"></div>
-        <div class="container">
-            <h2>¿Listo para Vestir como un Profissional?</h2>
-            <p>Stock limitado para esta temporada. Asegura el tuyo antes de que se agote.</p>
-            <a href="https://wa.me/5216121078078?text=Hola%2C%20quiero%20ordenar%20mi%20jersey%20México%202026" class="btn-primary" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                Ordenar por WhatsApp
-            </a>
+    <section class="py-20 md:py-32 bg-gradient-to-b from-zinc-900 via-green-950/30 to-black relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.2)_0%,transparent_60%)]"></div>
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6">
+                ¿Listo para Vestir como un <span class="gradient-text">Profesional</span>?
+            </h2>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                Stock limitado para esta temporada. Asegura el tuyo antes de que se agote. Envío GRATIS en Kit Equipo hasta el 31 de marzo.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/5216121078078?text=Hola%2C%20quiero%20ordenar%20mi%20jersey%20México%202026%20Versión%20Jugador" target="_blank" class="btn-primary text-xl px-10 py-5 animate-pulse-glow">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Ordenar por WhatsApp Ahora
+                </a>
+                <a href="https://forms.gle/rmrtYFEMU9dbNXkKA" target="_blank" class="btn-secondary text-lg px-8 py-4">
+                    Solicitar Cotización
+                </a>
+            </div>
+
+            <div class="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Envío a 32 estados
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Pago 100% seguro
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Garantía de devolución
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <div class="logo-icon">G5</div>
-                        <div class="logo-text">Jerseys <span>MX</span></div>
+    <footer class="bg-black border-t border-green-900/30 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="#" class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center font-extrabold text-xl text-black">G5</div>
+                        <div class="text-xl font-bold">Jerseys <span class="text-green-500">MX</span></div>
                     </a>
-                    <p>Distribuidor oficial de jerseys México 2026 Versión Jugador. Calidad premium con envíos a todo México.</p>
+                    <p class="text-gray-400 text-sm">Distribuidor oficial de jerseys México 2026 Versión Jugador. Calidad premium con envíos a todo México.</p>
                 </div>
-                <div class="footer-links">
-                    <h4>Productos</h4>
-                    <ul>
-                        <li><a href="#pricing">Kit Aficionado</a></li>
-                        <li><a href="#pricing">Kit Equipo</a></li>
-                        <li><a href="#pricing">Lote Mayorista</a></li>
+                <div>
+                    <h4 class="font-bold mb-4">Productos</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#precios" class="hover:text-green-500 transition-colors">Kit Aficionado</a></li>
+                        <li><a href="#precios" class="hover:text-green-500 transition-colors">Kit Equipo</a></li>
+                        <li><a href="#precios" class="hover:text-green-500 transition-colors">Lote Mayorista</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Información</h4>
-                    <ul>
-                        <li><a href="#features">Características</a></li>
-                        <li><a href="#gallery">Galería</a></li>
-                        <li><a href="#video">Proceso</a></li>
+                <div>
+                    <h4 class="font-bold mb-4">Información</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#que-es-g5" class="hover:text-green-500 transition-colors">¿Qué es G5?</a></li>
+                        <li><a href="#caracteristicas" class="hover:text-green-500 transition-colors">Características</a></li>
+                        <li><a href="#testimonios" class="hover:text-green-500 transition-colors">Testimonios</a></li>
+                        <li><a href="#faq" class="hover:text-green-500 transition-colors">FAQ</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li><a href="https://wa.me/5216121078078" target="_blank">WhatsApp</a></li>
-                        <li><a href="https://forms.gle/rmrtYFEMU9dbNXkKA" target="_blank">Formulario</a></li>
-                    </ul>
+                <div>
+                    <h4 class="font-bold mb-4">Contacto</h4>
+                    <a href="https://wa.me/5216121078078" target="_blank" class="inline-flex items-center gap-2 bg-green-500 text-black font-semibold px-4 py-2 rounded-xl hover:bg-green-400 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        WhatsApp
+                    </a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2026 G5 Jerseys MX. Todos los derechos reservados.</p>
-                <div class="social-links">
-                    <a href="https://wa.me/5216121078078" target="_blank" aria-label="WhatsApp">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    </a>
-                </div>
+            <div class="border-t border-green-900/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© 2026 G5 Jerseys MX. Todos los derechos reservados.</p>
+                <p class="text-gray-500 text-sm">Hecho con ❤️ en México 🇲🇽</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5216121078078?text=Hola%2C%20me%20interesa%20el%20jersey%20México%202026" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <a href="https://wa.me/5216121078078?text=Hola%2C%20me%20interesa%20el%20jersey%20México%202026" target="_blank" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform animate-pulse-glow" aria-label="Contactar por WhatsApp">
+        <svg class="w-9 h-9 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
     <script>
-        // Navbar scroll effect
-        const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // FAQ accordion
+        function toggleFaq(button) {
+            const faqItem = button.closest('.faq-item');
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Open clicked if wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1500,34 +1099,26 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
                     });
                 }
             });
         });
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.feature-card, .pricing-card, .gallery-item, .trust-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
+        // Navbar scroll effect
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-2xl');
+            } else {
+                navbar.classList.remove('shadow-2xl');
+            }
         });
     </script>
 </body>

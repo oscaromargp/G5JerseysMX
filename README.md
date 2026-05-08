@@ -1,4 +1,9 @@
 # 🛒 G5 Jerseys MX - Landing Page de Ventas
+<p align="center">
+  <img src="assets/banner.png" alt="G5Jerseysmx" width="100%"/>
+</p>
+
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge&logo=vercel&logoColor=white" alt="Status">
@@ -745,3 +750,13 @@ Si este proyecto te fue útil, considera apoyarlo.
   <strong>A Dios, toda la gloria.</strong>
   <br/>
 </p>
+
+
+## 📸 Capturas de pantalla
+
+<p align="center">
+  <img src="assets/screenshot-1.png" alt="Captura del proyecto" width="700" style="border-radius:8px;"/>
+</p>
+
+> ¿No puedes ver la imagen? [Ver en el navegador](assets/)
+

@@ -707,3 +707,41 @@ Puedes usar, modificar y distribuir este código libremente, dando crédito al d
   📱 WhatsApp: +52 1 612 107 8078<br>
   🇲🇽 Hecho con ❤️ en México
 </p>
+
+
+## 💬 Preguntas y Soporte
+
+<p align="center">
+  <a href="https://wa.me/526121077805?text=Hola%20Oscar%2C%20vi%20tu%20proyecto%20en%20GitHub%20y%20quisiera%20preguntarte...">
+    <img src="https://img.shields.io/badge/WhatsApp-Contactar-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"/>
+  </a>
+</p>
+
+
+
+## 💖 Apoya este Proyecto
+
+Si este proyecto te fue útil, considera apoyarlo.
+
+> **Dirección XRP**: `rBthUCndKy3Xbb19Ln4xkZeMwusX9NrYfj`
+
+
+
+## 🙏 Agradecimientos
+
+<p align="center">
+  <br/>
+  <em>
+    "Porque Dios es el que en vosotros produce<br/>
+    así el querer como el hacer,<br/>
+    por su buena voluntad."
+  </em>
+  <br/>
+  <strong>— Filipenses 2:13</strong>
+  <br/><br/>
+  Todo lo que aquí existe nació primero como un deseo en el corazón.<br/>
+  Cada proyecto, cada línea, cada idea que toma forma —<br/>
+  es un regalo de Aquel que nos dio tanto el sueño como la fuerza de alcanzarlo.<br/>
+  <strong>A Dios, toda la gloria.</strong>
+  <br/>
+</p>
